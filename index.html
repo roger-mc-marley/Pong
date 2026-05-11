@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pong Minimalista</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell" aria-label="Gioco Pong">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Arcade 1972</p>
+          <h1>Pong</h1>
+        </div>
+        <div class="actions">
+          <label class="switch">
+            <input id="soundToggle" type="checkbox" checked>
+            <span>Sonoro</span>
+          </label>
+          <button id="serveButton" class="button" type="button">Servi</button>
+        </div>
+      </header>
+
+      <nav class="difficulty" aria-label="Livello di difficolta">
+        <button class="level" type="button" data-level="easy">Facile</button>
+        <button class="level is-active" type="button" data-level="medium">Medio</button>
+        <button class="level" type="button" data-level="hard">Difficile</button>
+      </nav>
+
+      <section class="scoreboard" aria-live="polite">
+        <div class="score">
+          <span>Tu</span>
+          <strong id="playerScore">0</strong>
+        </div>
+        <div class="status" id="statusText">Premi Spazio o Servi</div>
+        <div class="score">
+          <span>CPU</span>
+          <strong id="cpuScore">0</strong>
+        </div>
+      </section>
+
+      <canvas id="game" width="900" height="520" aria-label="Campo di gioco Pong"></canvas>
+
+      <footer class="controls">
+        <span>Muovi: W/S o frecce</span>
+        <span>Pausa: P</span>
+        <span>Riavvia: R</span>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
